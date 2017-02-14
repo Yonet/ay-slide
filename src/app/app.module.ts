@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { ListModule } from './list/list.module';
 import { AppComponent } from './app.component';
+import { TrackingDirective } from './tracking.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TrackingDirective,
   ],
   imports: [
     BrowserModule,
