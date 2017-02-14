@@ -1,8 +1,11 @@
-{
+{ "author":"Ayşegül Yönet",
   "name": "ay-slide",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
+  "bugs": {
+    "url": "https://github.com/Yonet/TweetMigration/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
