@@ -9,15 +9,15 @@ import { FooterComponent } from './footer/footer.component';
 import { TrackingDirective } from './tracking.directive';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-     HeaderModule,
-  ],
-  declarations: [
-    FooterComponent,
-    TrackingDirective,
-  ],
-  providers: [ExceptionService]
+	imports: [
+		CommonModule,
+		RouterModule,
+		HeaderModule,
+	],
+	declarations: [
+		FooterComponent,
+		TrackingDirective,
+	],
+	providers: [ExceptionService]
 })
 export class CoreModule { }

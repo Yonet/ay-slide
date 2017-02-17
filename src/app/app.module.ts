@@ -1,22 +1,31 @@
+// Angular imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
+// 3rd party libraries
+// import './core/rxjs-extensions';
+// import 'hammerjs';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+// Application specific imports
+import { DataService } from './models/data.service';
+import { CoreModule } from './core/core.module';
 import { ListModule } from './list/list.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    ListModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+	],
+	imports: [
+		BrowserModule,
+		CoreModule,
+		ListModule,
+	],
+	providers: [DataService],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
