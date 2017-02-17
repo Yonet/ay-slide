@@ -21,6 +21,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 		ToastModule,
 	],
 	exports: [
+		HeaderModule,
 		ToastModule,
 		PageNotFoundComponent
 	],
