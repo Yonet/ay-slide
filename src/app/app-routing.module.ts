@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { PreloadSelectedModulesList } from './core/preload-strategy';
 
 const routes: Routes = [
+	{ path: '', loadChildren: 'app/list/list.module#ListModule' },
 	// { path: '', pathMatch: 'full', redirectTo: 'dashboard', },
 	// {
 	// 	path: 'admin',
