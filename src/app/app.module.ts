@@ -12,7 +12,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 // Application specific imports
 import { DataService } from './models/data.service';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routes';
 import { CoreModule } from './core/core.module';
 import { ListModule } from './list/list.module';
 import { AppComponent } from './app.component';
