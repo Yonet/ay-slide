@@ -1,0 +1,44 @@
+// @import '../../shared/styles/colors.scss';
+$indochine: #ca7000;
+
+.toast-container {
+	/*-webkit-transition-property:opacity, bottom, left, right, width, margin, border-radius;
+	  transition-property:opacity, bottom, left, right, width, margin, border-radius;
+	  -webkit-transition-duration:1.0s;
+	          transition-duration:1.0s;
+	  -webkit-transition-timing-function:ease;
+	          transition-timing-function:ease;*/
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 30%;
+	overflow: scroll;
+	z-index: 9999;
+	opacity: 0;
+	transition: opacity 400ms ease-in;
+}
+
+.toast-container > * {
+	text-align: center;
+}
+
+.toast-card {
+	width: 70%;
+	z-index: 1;
+	padding: 2px;
+	position: relative;
+	background-color: $indochine;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+}
+
+.toast-card .toast-message {
+	margin: 0 2em 1em;
+}
+
+.toast-card .toast-title {
+	text-transform: uppercase;
+	margin: 16px;
+	font-size: 18px;
+}

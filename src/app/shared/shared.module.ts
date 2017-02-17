@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 		CommonModule,
 		FormsModule
 	],
+	exports: [CommonModule, FormsModule],
 	declarations: []
 })
 export class SharedModule { }
