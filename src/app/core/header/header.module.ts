@@ -5,12 +5,12 @@ import { AppSwitcherComponent } from './app-switcher/app-switcher.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [
-    AppSwitcherComponent,
-    ProfileComponent,
-  ]
+	imports: [
+		CommonModule
+	],
+	declarations: [
+		AppSwitcherComponent,
+		ProfileComponent,
+	]
 })
 export class HeaderModule { }

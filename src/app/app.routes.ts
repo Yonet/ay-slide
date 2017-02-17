@@ -6,23 +6,11 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { PreloadSelectedModulesList } from './core/preload-strategy';
 
 const routes: Routes = [
-	{ path: '', loadChildren: 'app/list/list.module#ListModule' },
-	// { path: '', pathMatch: 'full', redirectTo: 'dashboard', },
-	// {
-	// 	path: 'admin',
-	// 	loadChildren: 'app/admin/admin.module#AdminModule',
-	// 	canActivate: [AuthGuard],
-	// 	canLoad: [AuthGuard],
-	// },
-	// {
-	// 	path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule',
-	// 	data: { preload: true }
-	// },
-	// {
-	// 	path: 'speakers', loadChildren: 'app/speakers/speakers.module#SpeakersModule',
-	// 	data: { preload: true }
-	// },
-	// { path: 'sessions', loadChildren: 'app/sessions/sessions.module#SessionsModule' },
+	{
+		path: '', loadChildren: 'app/list/list.module#ListModule',
+		// canActivate: [AuthGuard],
+		// canLoad: [AuthGuard],
+	},
 	{ path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
@@ -35,7 +23,7 @@ const routes: Routes = [
 		AuthGuard,
 		CanDeactivateGuard,
 		PreloadSelectedModulesList,
-		// UserProfileService
+		UserProfileService
 	]
 })
 export class AppRoutingModule { }
