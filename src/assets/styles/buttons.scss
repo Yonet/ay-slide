@@ -1,0 +1,40 @@
+@import './colors.scss';
+
+.action-btn {
+	opacity: 0;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: opacity .25s ease-out;
+}
+
+.action-btn:hover {
+	opacity: 1;
+	fill: $tangerine;
+}
+
+.actions-container {
+	opacity: 0;
+	transition: all .25s ease-out;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.btn {
+	background-color: $tangerine;
+	border-color: $tangerine;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 32px;
+	padding: 0 40px;
+	text-align: center;
+	text-decoration: none;
+	transition: opacity .25s ease-out;
+}

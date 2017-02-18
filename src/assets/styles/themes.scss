@@ -1,0 +1,112 @@
+@import '~@angular/material/core/theming/theming';
+@mixin typography-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+
+	h1 {
+		color: mat-color($primary, 800);
+		background: rgba(mat-color($foreground, secondary-text), .03);
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	li,
+	ol,
+	p {
+		color: mat-color($foreground, secondary-text);
+	}
+
+	a {
+		color: mat-color($primary);
+	}
+
+	table {
+		box-shadow: 0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12);
+	}
+
+	table tbody th {
+		border: 1px solid rgba(mat-color($foreground, secondary-text), .03);
+	}
+
+	td {
+		color: mat-color($foreground, secondary-text);
+		border: 1px solid rgba(mat-color($foreground, secondary-text), .03);
+	}
+
+	th {
+		color: mat-color($foreground, secondary-text);
+		background: rgba(mat-color($foreground, secondary-text), .03);
+	}
+}
+@mixin typography() {
+	h1 {
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 400;
+		padding: 5px;
+	}
+
+	h2,
+	h3 {
+		font-size: 20px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		margin-top: 80px;
+	}
+
+	h4 {
+		margin-top: 40px;
+	}
+
+	h5 {
+		font-size: 16px;
+	}
+
+	.md-tab-body-wrapper h2 {
+		margin-top: 0;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-radius: 2px;
+		border-spacing: 0;
+		margin: 0 0 32px;
+		width: 100%;
+	}
+
+	table tbody th {
+		max-width: 100px;
+		padding: 13px 32px;
+		text-align: left;
+	}
+
+	td {
+		font-weight: 400;
+		padding: 8px 30px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	th {
+		font-size: 16px;
+		font-weight: 400;
+		padding: 13px 32px;
+		text-align: left;
+	}
+}

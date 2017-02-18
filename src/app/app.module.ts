@@ -2,7 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule, RequestOptions } from '@angular/http';
-
+import { DomSanitizer } from '@angular/platform-browser';
+import { MdIconRegistry } from '@angular/material';
 // 3rd party libraries
 import './core/rxjs-extensions';
 // import 'hammerjs';
@@ -13,6 +14,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 // Application specific imports
 import { DataService } from './models/data.service';
 import { AppRoutingModule } from './app.routes';
+
 import { CoreModule } from './core/core.module';
 import { ListModule } from './list/list.module';
 import { AppComponent } from './app.component';
@@ -33,7 +35,12 @@ import { AppComponent } from './app.component';
 })
 export class AppModule {
 
-	constructor(requestOptions: RequestOptions) {
+	constructor(
+		private requestOptions: RequestOptions,
+		private iconRegistry: MdIconRegistry,
+		private sanitizer: DomSanitizer,
+	) {
 		requestOptions.headers.set('Content-Type', 'application/json');
+		// iconRegistry.
 	}
 }
