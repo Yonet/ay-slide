@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/all-theme';
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+$primary: mat-palette($mat-cyan);
+$accent: mat-palette($mat-amber, A200, A100, A400);
+$theme: mat-light-theme($primary, $accent); // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$candy-app-primary: mat-palette($mat-cyan);
+$candy-app-accent: mat-palette($mat-pink, A200, A100, A400); // The warn palette is optional (defaults to red).
+$candy-app-warn: mat-palette($mat-red); // Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn); // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+@include angular-material-theme($candy-app-theme);
+
+.unicorn-dark-theme {
+	$dark-primary: mat-palette($mat-blue-grey);
+	$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+	$dark-warn: mat-palette($mat-deep-orange);
+	$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+	@include angular-material-theme($dark-theme);
+}
+
+body {
+	font-family: 'Roboto','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+	margin: 0;
+}
+
+[md-button],
+[md-raised-button] {
+	text-transform: uppercase;
+}
+
+h1,
+h2 {
+	weight: 400;
+}
+
+pre {
+	// Pre elements won't wrap text by default and can exceed the boundaries of their parent element.
+	// This adds extra scroll space when visiting the docs mobile. Pre-wrapping the code examples
+	// will ensure that the code never exceeds the page width.
+	white-space: pre-wrap;
+}
+
+.docs-primary-header {
+	padding-left: 20px;
+
+	h1 {
+		font-size: 30px;
+		font-weight: 300;
+		margin: 0;
+		padding: 50px;
+	}
+}
