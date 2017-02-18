@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'ay-copy',
-  templateUrl: './copy.component.html',
-  styleUrls: ['./copy.component.scss']
+	selector: 'ay-copy',
+	templateUrl: './copy.component.html',
+	styleUrls: ['./copy.component.scss']
 })
-export class CopyComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class CopyComponent {
+	@Output() copy = new EventEmitter();
 
 }

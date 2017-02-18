@@ -10,7 +10,18 @@ export class ListComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit() {
+	ngOnInit() { }
+
+	createNew() {
+
 	}
+
+	copyItem(item) { }
+
+	deleteItem(item) {
+		// dispatch delete event
+	}
+
+	shareItem(item) { }
 
 }

@@ -1,3 +1,6 @@
+<button (click)='createNew()' md-raised-button>Create new</button>
 <md-card *ngFor='let item of list'>{{item}}
-	<ay-delete></ay-delete>
+	<md-card-actions>
+		<ay-delete (delete)='deleteItem(item)'></ay-delete>
+	</md-card-actions>
 </md-card>
