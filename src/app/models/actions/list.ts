@@ -1,5 +1,6 @@
 import { Action } from '@ngrx/store';
-import { Item } from './item';
+
+import { Item } from '../app.model';
 import { type } from '../../core/util/util';
 
 export const ActionTypes = {
@@ -20,7 +21,7 @@ export const ActionTypes = {
 export class AddItemAction implements Action {
 	type = ActionTypes.ADD_ITEM;
 
-	constructor(public payload: Item) { }
+	constructor(public payload: any) { }
 }
 
 export class AddItemSuccessAction implements Action {

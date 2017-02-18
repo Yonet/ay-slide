@@ -1,16 +1,7 @@
 import { Action } from '@ngrx/store';
-import { type } from '../../core/util/util';
 
-export interface Item {
-	created: Date;
-	id: string;
-	lastModified: Date;
-	name: string;
-	// slides: Slide[];
-	urn: string;
-	userId: string;
-	userRole: string;
-}
+import { Item } from '../app.model';
+import { type } from '../../core/util/util';
 
 /**
  * For each action type in an action group, make a simple

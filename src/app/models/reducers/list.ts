@@ -1,15 +1,20 @@
 import * as list from '../actions/list';
+import { createSelector } from 'reselect';
+
+import { Item } from '../app.model';
 
 export interface State {
 	loaded: boolean;
 	loading: boolean;
+	entities: { [id: string]: Item };
 	ids: string[];
 };
 
 const initialState: State = {
 	loaded: false,
 	loading: false,
-	ids: []
+	entities: {},
+	ids: [],
 };
 
 export function reducer(state = initialState, action: list.Actions): State {
@@ -60,9 +65,14 @@ export function reducer(state = initialState, action: list.Actions): State {
 	}
 }
 
-
 export const getLoaded = (state: State) => state.loaded;
 
 export const getLoading = (state: State) => state.loading;
 
+export const getEntities = (state: State) => state.entities;
+
 export const getIds = (state: State) => state.ids;
+
+export const getAll = createSelector(getEntities, getIds, (entities, ids) => {
+	return ids.map(id => entities[id]);
+});

@@ -88,6 +88,4 @@ export const getListLoaded = createSelector(getListState, fromList.getLoaded);
 export const getListLoading = createSelector(getListState, fromList.getLoading);
 export const getListItemIds = createSelector(getListState, fromList.getIds);
 
-// export const getItemList = createSelector(getItemEntities, getListItemIds, (entities, ids) => {
-// 	return ids.map(id => entities[id]);
-// });
+export const getItemList = createSelector(getListState, fromList.getAll);
