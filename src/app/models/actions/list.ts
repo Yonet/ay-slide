@@ -21,7 +21,7 @@ export const ActionTypes = {
 export class AddItemAction implements Action {
 	type = ActionTypes.ADD_ITEM;
 
-	constructor(public payload: any) { }
+	constructor() { }
 }
 
 export class AddItemSuccessAction implements Action {
@@ -33,7 +33,7 @@ export class AddItemSuccessAction implements Action {
 export class AddItemFailAction implements Action {
 	type = ActionTypes.ADD_ITEM_FAIL;
 
-	constructor(public payload: Item) { }
+	constructor(public payload: any) { }
 }
 
 
@@ -49,13 +49,13 @@ export class RemoveItemAction implements Action {
 export class RemoveItemSuccessAction implements Action {
 	type = ActionTypes.REMOVE_ITEM_SUCCESS;
 
-	constructor(public payload: Item) { }
+	constructor(public payload: any) { }
 }
 
 export class RemoveItemFailAction implements Action {
 	type = ActionTypes.REMOVE_ITEM_FAIL;
 
-	constructor(public payload: Item) { }
+	constructor(public payload: any) { }
 }
 
 /**
