@@ -1,0 +1,6 @@
+{
+	"GCLOUD_PROJECT": "ay-slide",
+	"DATA_BACKEND": "mongodb",
+	"MONGO_URL": "mongodb://127.0.0.1:27017/slides",
+	"MONGO_COLLECTION": "slides"
+}

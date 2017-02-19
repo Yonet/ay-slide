@@ -26,19 +26,19 @@ router.use( ( req, res, next ) => {
  *
  * Display a page of presentations (up to ten at a time).
  */
-router.get( '/', ( req, res, next ) => {
-	getModel()
-		.list( 10, req.query.pageToken, ( err, entities, cursor ) => {
-			if ( err ) {
-				next( err );
-				return;
-			}
-			res.render( 'presentations/list.jade', {
-				presentations: entities,
-				nextPageToken: cursor
-			} );
-		} );
-} );
+// router.get( '/', ( req, res, next ) => {
+// 	getModel()
+// 		.list( 10, req.query.pageToken, ( err, entities, cursor ) => {
+// 			if ( err ) {
+// 				next( err );
+// 				return;
+// 			}
+// 			res.render( 'presentations/list.jade', {
+// 				presentations: entities,
+// 				nextPageToken: cursor
+// 			} );
+// 		} );
+// } );
 
 /**
  * GET /presentations/add

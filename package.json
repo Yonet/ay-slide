@@ -9,7 +9,9 @@
 	},
 	"scripts": {
 		"ng": "ng",
-		"start": "ng serve --host 0.0.0.0 --port 4201 --live-reload-port 49153",
+		"start": "node app.js",
+		"monitor": "nodemon app.js",
+		"deploy": "gcloud app deploy app.yaml",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e"
@@ -47,6 +49,7 @@
 		"@types/jasmine": "2.5.38",
 		"@types/node": "~6.0.60",
 		"codelyzer": "~2.0.0-beta.4",
+		"express": "^4.14.1",
 		"jasmine-core": "~2.5.2",
 		"jasmine-spec-reporter": "~3.2.0",
 		"karma": "~1.4.1",
