@@ -17,15 +17,15 @@ export class ListComponent {
 	public list$: Observable<any>;
 
 	constructor(private store: Store<fromRoot.State>, private service: DataService) {
-		this.service.getPresentations()
-			.subscribe(res => this.list$ = res);
+		// this.service.getPresentations()
+		// 	.subscribe(res => this.list$ = res);
 		// this.list$ = store.select(fromRoot.getItemList);
 	}
 
 	createNew() {
-		this.service.createPresentation()
-			.subscribe(res => console.log('created new', res));
-		this.store.dispatch(new list.AddItemAction());
+		// this.service.createPresentation()
+		// 	.subscribe(res => console.log('created new', res));
+		// this.store.dispatch(new list.AddItemAction());
 	}
 
 	copyItem(item) { }

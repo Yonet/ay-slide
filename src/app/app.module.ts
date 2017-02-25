@@ -32,7 +32,8 @@ import { reducer } from './models/reducers';
 		BrowserModule,
 		HttpModule,
 		EditModule,
-		// RouterModule.forRoot(routes, { useHash: true }),
+		AppRoutingModule,
+		//
 		StoreModule.provideStore(reducer),
 		/**
 		* @ngrx/router-store keeps router state up-to-date in the store and uses

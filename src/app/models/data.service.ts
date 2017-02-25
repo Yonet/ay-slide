@@ -12,6 +12,7 @@ import { environment } from '../../environments/environment';
 import { AppStore } from './app.model';
 
 const presentationApi = environment['url'] + environment['presentation_api'];
+const peopleApi = environment['people'];
 
 @Injectable()
 export class DataService {
@@ -21,15 +22,25 @@ export class DataService {
 		private store: Store<AppStore>,
 	) { }
 
-	getPresentations() {
-		console.log('getting presentations')
+	getPeople() {
 		return <Observable<any>>this.http
 			.get(presentationApi, this.getRequestOptions())
-			.map((res: Response) => this.extractData(res))
-			.do(r => console.log('r', r))
+			.map((res: Response) => this.extractData(res));
+		// 	.do(r => console.log('r', r))
+
+	}
+
+	getPresentations() {
+		// console.log('getting presentations')
+		// return <Observable<any>>this.http
+		// 	.get(presentationApi, this.getRequestOptions())
+		// 	.map((res: Response) => this.extractData(res))
+		// 	.do(r => console.log('r', r))
 		// .map(r => );
 
 	}
+
+
 
 	getPresentationById(id) {
 
