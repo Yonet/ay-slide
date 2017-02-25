@@ -22,6 +22,12 @@ export class DataService {
 	) { }
 
 	getPresentations() {
+		console.log('getting presentations')
+		return <Observable<any>>this.http
+			.get(presentationApi, this.getRequestOptions())
+			.map((res: Response) => this.extractData(res))
+			.do(r => console.log('r', r))
+		// .map(r => );
 
 	}
 
@@ -48,9 +54,17 @@ export class DataService {
 			}
 		}
 		const options = new RequestOptions({
-			withCredentials: true,
 			headers: headers,
 		});
 		return options;
 	};
+
+	private extractData<T>(res: Response) {
+		console.log('Response is being extracted ', res);
+		if (res.status < 200 || res.status >= 300) {
+			throw new Error('Bad response status: ' + res.status);
+		};
+		const body = res.json();
+		return <T>(body || {});
+	}
 }

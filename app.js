@@ -22,6 +22,8 @@ app.use( ( req, res ) => {
 
 // Basic error handler
 app.use( ( err, req, res, next ) => {
+	res.header( "Access-Control-Allow-Origin", "*" );
+	res.header( "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept" );
 	/* jshint unused:false */
 	console.error( err );
 	// If our routes specified a specific response, then send that. Otherwise,

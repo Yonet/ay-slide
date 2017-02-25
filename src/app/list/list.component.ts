@@ -14,10 +14,12 @@ import { DataService } from '../models/data.service';
 })
 export class ListComponent {
 
-	public list$: Observable<Item[]>;
+	public list$: Observable<any>;
 
 	constructor(private store: Store<fromRoot.State>, private service: DataService) {
-		this.list$ = store.select(fromRoot.getItemList);
+		this.service.getPresentations()
+			.subscribe(res => this.list$ = res);
+		// this.list$ = store.select(fromRoot.getItemList);
 	}
 
 	createNew() {
