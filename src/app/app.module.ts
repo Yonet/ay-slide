@@ -11,7 +11,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { RouterStoreModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
+import { RouterModule } from '@angular/router';
 
 // Application specific imports
 import { DataService } from './models/data.service';
@@ -20,7 +20,8 @@ import { AppRoutingModule } from './app.routes';
 import { CoreModule } from './core/core.module';
 import { ListModule } from './list/list.module';
 import { AppComponent } from './app.component';
-
+import { EditModule } from './edit/edit.module';
+// import { routes } from './app-routing.routes';
 import { reducer } from './models/reducers';
 
 @NgModule({
@@ -30,6 +31,8 @@ import { reducer } from './models/reducers';
 	imports: [
 		BrowserModule,
 		HttpModule,
+		EditModule,
+		// RouterModule.forRoot(routes, { useHash: true }),
 		StoreModule.provideStore(reducer),
 		/**
 		* @ngrx/router-store keeps router state up-to-date in the store and uses
