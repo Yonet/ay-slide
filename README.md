@@ -55,10 +55,6 @@ npm list -g -depth=0
 └── webpack-dev-server@1.16.2
 ```
 
-- Setup private npm in development
-
-Follow the documentation on the wiki so [setup private npm.](https://wiki.autodesk.com/display/SPRY/Setting+up+Private+NPM+in+development). We need this to download [Forge Presentations](https://git.autodesk.com/rochaf/autodesk-model-presenter)
-
 - Install [angular-cli](https://github.com/angular/angular-cli)
 
 ```
@@ -88,12 +84,6 @@ ng serve
 App will be running at <http://localhost:4200/>
 
 ### Build
-
-- To run local nitrous environment:
-
-```
-ng serve -env=local
-```
 
 - To run production/staging build on your local environment with nitrous staging:
 
@@ -125,8 +115,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ```
 #Sets base tag href to /myUrl/ in your index.html
-ng build --base-href /presentations/app/
-ng build --bh /presentations/app/
+ng build --base-href /app/
+ng build --bh /app/
 ```
 
 ### Deployments
@@ -165,9 +155,7 @@ Then add the needed script files to to `apps[0].scripts`.
 
 ```
 "scripts": [
-        "public/bower_components/forge-presentations/distrib/lib/presentations.js",
-        "public/bower_components/autodesk-data-oss-js/scripts/FileSaver.js",
-        "public/bower_components/autodesk-data-oss-js/scripts/Autodesk.Data.OSS.js"
+        "public/bower_components/bootstrap.js",
     ],
 ```
 
