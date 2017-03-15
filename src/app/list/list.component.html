@@ -1,7 +1,7 @@
-<button (click)='createNew()' md-raised-button>Create new</button> {{list$ | async | json}}
-<md-card *ngFor='let item of (list$ | async)'>
-	<md-card-title>{{item.id}}</md-card-title>
+<button (click)='createNew()' md-raised-button>Create new</button> {{ list$ | async | json}}
+<md-card *ngFor='let p of (people | async)'>
+	<md-card-title>{{p.name}}</md-card-title>
 	<md-card-actions>
-		<ay-delete (delete)='deleteItem(item)'></ay-delete>
+		<!-- <ay-delete (delete)='deleteItem(item)'></ay-delete> -->
 	</md-card-actions>
 </md-card>

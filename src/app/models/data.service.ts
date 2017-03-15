@@ -23,8 +23,9 @@ export class DataService {
 	) { }
 
 	getPeople() {
+		// console.log("PPPPPPPPP");
 		return <Observable<any>>this.http
-			.get(presentationApi, this.getRequestOptions())
+			.get(peopleApi, this.getRequestOptions())
 			.map((res: Response) => this.extractData(res));
 		// 	.do(r => console.log('r', r))
 
@@ -32,9 +33,9 @@ export class DataService {
 
 	getPresentations() {
 		// console.log('getting presentations')
-		// return <Observable<any>>this.http
-		// 	.get(presentationApi, this.getRequestOptions())
-		// 	.map((res: Response) => this.extractData(res))
+		return <Observable<any>>this.http
+			.get(presentationApi, this.getRequestOptions())
+			.map((res: Response) => this.extractData(res))
 		// 	.do(r => console.log('r', r))
 		// .map(r => );
 
@@ -58,15 +59,19 @@ export class DataService {
 	updatePresentation(p) { }
 
 	private getRequestOptions(args?) {
+
 		const headers = new Headers();
+
 		if (args) {
 			for (const key in args) {
 				headers.append(key, args[key]);
 			}
 		}
+
 		const options = new RequestOptions({
 			headers: headers,
 		});
+
 		return options;
 	};
 
