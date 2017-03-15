@@ -19,7 +19,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
  *
  * Do collect single-use classes and hiding their gory details inside CoreModule.
  * A simplified root AppModule imports CoreModule in its capacity as orchestrator of the application as a whole.
- * Do put a singleton service whose instance wil be shared throughout the application in the CoreModule
+ * Do put a singleton service whose instance will be shared throughout the application in the CoreModule
  * (e.g. ExceptionService and LoggerService).
  *
  * Do gather application-wide, single use components in the CoreModule.
